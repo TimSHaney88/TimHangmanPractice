@@ -1,0 +1,6 @@
+﻿  main.cpp
+  Dictionary.cpp
+c:\users\thane\documents\github\timhangmanpractice\dictionary.cpp(53): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  Hangman.vcxproj -> C:\Users\thane\Documents\Github\TimHangmanPractice\x64\Debug\Hangman.exe
+  Hangman.vcxproj -> C:\Users\thane\Documents\Github\TimHangmanPractice\x64\Debug\Hangman.pdb (Partial PDB)
