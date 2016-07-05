@@ -1,5 +1,5 @@
 acres
-      adult 
+adult 
 advice 
 arrangement
 attempt
