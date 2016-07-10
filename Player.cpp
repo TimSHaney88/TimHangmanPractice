@@ -26,11 +26,11 @@ int Player::getNumberOfWrongGuesses()
 }
 int Player::getTotalNumberOfGuesses()
 {
-
+	return 0;
 }
-Player::vector<char>getListCharGuessed()
+vector<char>getListCharGuessed()
 {
-
+	return;
 }
 void Player::displayGuessedLetters()
 {
@@ -38,6 +38,9 @@ void Player::displayGuessedLetters()
 }
 bool Player::alreadyGuessed(char guessedLetter)
 {
-
+	return 0;
 }
 void Player::reset()
+{
+
+}

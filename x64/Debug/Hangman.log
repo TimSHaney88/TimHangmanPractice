@@ -1,3 +1,3 @@
 ﻿  Player.cpp
-  Hangman.vcxproj -> C:\Users\thane\Documents\Github\TimHangmanPractice\x64\Debug\Hangman.exe
-  Hangman.vcxproj -> C:\Users\thane\Documents\Github\TimHangmanPractice\x64\Debug\Hangman.pdb (Partial PDB)
+c:\users\thane\documents\github\timhangmanpractice\player.cpp(33): error C2561: 'getListCharGuessed': function must return a value
+  c:\users\thane\documents\github\timhangmanpractice\player.cpp(31): note: see declaration of 'getListCharGuessed'

@@ -26,17 +26,17 @@ public:
 	//verifies if input is alphabet or not
 	bool isLetter(char letter);
 	//returns number of wrong guesses
-	int getNumberOfWrongGuesses() {};
+	int getNumberOfWrongGuesses();
 	//returns total number of guesses(right and wrong)
-	int getTotalNumberOfGuesses() {};
+	int getTotalNumberOfGuesses();
 	//returns a list of charcters guessed
-	vector<char>getListCharGuessed() {};
+	vector<char>getListCharGuessed();
 	//displays guessed letters
-	void displayGuessedLetters() {};
+	void displayGuessedLetters();
 	//returns true or false for if letter was already guessed
-	bool alreadyGuessed(char guessedLetter) {};
+	bool alreadyGuessed(char guessedLetter);
 	//sets all the variables to zero and clears the guessed list
-	void reset() {};
+	void reset();
 
 
 };
