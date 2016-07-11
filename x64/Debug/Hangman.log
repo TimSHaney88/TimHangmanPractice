@@ -1,4 +1,6 @@
-﻿  Player.cpp
-c:\users\thane\documents\github\timhangmanpractice\player.cpp(62): warning C4715: 'Player::alreadyGuessed': not all control paths return a value
-  Hangman.vcxproj -> C:\Users\thane\Documents\Github\TimHangmanPractice\x64\Debug\Hangman.exe
-  Hangman.vcxproj -> C:\Users\thane\Documents\Github\TimHangmanPractice\x64\Debug\Hangman.pdb (Partial PDB)
+﻿  main.cpp
+  Game.cpp
+c:\users\thane\documents\github\timhangmanpractice\game.cpp(24): error C2275: 'Dictionary': illegal use of this type as an expression
+  c:\users\thane\documents\github\timhangmanpractice\dictionary.h(11): note: see declaration of 'Dictionary'
+c:\users\thane\documents\github\timhangmanpractice\game.cpp(24): error C2146: syntax error: missing ')' before identifier 'dictionary'
+  Generating Code...

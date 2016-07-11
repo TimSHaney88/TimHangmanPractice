@@ -13,7 +13,7 @@ class Game
 {
 private:
 	//total number of wrong guesses a player can have before losing
-	int totalNumberOfGuessesBeforeLoss;
+	//int totalNumberOfGuessesBeforeLoss;
 	//how many letters in word chosen
 	int wordLength;
 	//holds chosen word
