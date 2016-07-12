@@ -15,9 +15,9 @@ void Player::getNewLetter(char letter, bool isGuessCorrect)
 {
 	if (!isGuessCorrect)
 	{
-		++numberOfWrongGuesses;
+		numberOfWrongGuesses++;
 	}
-	++totalNumberOfGuesses;
+	totalNumberOfGuesses++;
 	listCharGuessed.push_back(letter);
 }
 
