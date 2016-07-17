@@ -59,6 +59,94 @@ void Game::Play(Player player, Dictionary dictionary)
 	}
 	cout << endl;
 	//loop to play game
+	while ((player.getNumberOfWrongGuesses() < totalNumberOfGuessesBeforeLoss) && (correctLetters != wordLength))
+	{
+		//prompts the user to guess a letter
+		cout << "Choose a letter: ";
+		cin >> letter;
+
+		//checks if input from the user is a valid letter
+		if (player.isLetter(letter) == true)
+		{
+			
+			player.alreadyGuessed = false;
+			for (int i = 0; i < player.displayGuessedLetters.size(); i++)
+			{
+				if (player.displayGuessedLetters.at(i); i++)
+				{
+					player.alreadyGuessed = true;
+					cout << "Letter aleady guessed ";
+					break;
+				}
+			}
+			if (player.alreadyGuessed == true)
+			{
+
+			}
+			else
+			{
+				//loop to check if the letter is the word
+				for (int i = 0; wordLength; i++)
+				{
+					//checks if the letter guessed is equal to every letter
+					if (letter == word[i])
+					{
+						//changes the char underscore for the letter
+						guessedLetters[i] = letter;
+						correctLetters++;
+						isGuessCorrect = true;
+					}
+				}
+				//checks if the isGuessCorrect variable is equal to false
+				if (isGuessCorrect == false)
+				{
+					//lets player know that the letter is not in the word
+					cout << "That letter is not in the word, try again " << endl;
+
+					//calls the getNewLetter function from player to increment the number of wrong guesses and total guesses by one
+					player.getNewLetter(letter, isGuessCorrect);
+						displayCharGuessed = player.getListCharGuessed();
+				}
+				else
+				{
+					//lets player know that the letter is in the word
+					cout << "You guessed a letter! " << endl;
+					//calls getNewLetter function from player to incremet number of total guesses by one
+					player.getNewLetter(letter, isGuessCorrect);
+					displayCharGuessed = player.getListCharGuessed();
+				}
+				//loop to display the guessedLetters array so player knows the letters guessed and get an idea of the word
+				for (int i = 0; i < wordLength; i++)
+				{
+					cout << guessedLetters[i] << " ";
+				}
+				//sets the isGuessCorrect to false again
+				isGuessCorrect = false;
+			}
+		}
+		cout << endl;
+		cout << endl;
+		cout << "Guessed Letters: ";
+		getDisplayGuessedLetter(player);
+		//calls the GetListCharGuessed function from the player to display list of all the letters guessed
+		player.getListCharGuessed();
+		cout << endl;
+		//calls the getNumOfWrongGuesses from player to display the number of wrong guesses
+		cout << "How many wrong guesses?: " << player.getNumberOfWrongGuesses() << endl;
+	}
+	//calls the function to check if player wins or loses
+	winOrLoss(player);
+	//hold yes or no answer
+	string answer;
+	//prompts the player to play again
+	cout << "Would you like to play again? Y or N ";
+	cin >> answer;
+	//if the answer is yes game resets
+	if (answer == "Y" || answer == "y")
+	{
+		resetGame(player, dictionary);
+	}
+
 }
 //checks if the player wins or loses
 void Game::winOrLoss(Player player)
