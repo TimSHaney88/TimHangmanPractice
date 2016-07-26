@@ -21,7 +21,7 @@ Game::Game(Player player, Dictionary dictionary)
 	cout << "How many guesses do you want? ";
 	cin >> numberOfWrongGuesses;
 	cout << "You will get " << numberOfWrongGuesses << " before you lose" << endl;
-	getWordFromDictionary(Dictionary dictionary);
+	getWordFromDictionary(dictionary);
 	//tells user how many letters are in secret word
 	cout << "Your word has " << wordLength << " letters" << endl;
 	//calls function to play the game
@@ -72,7 +72,7 @@ void Game::Play(Player player, Dictionary dictionary)
 			player.alreadyGuessed = false;
 			for (int i = 0; i < player.displayGuessedLetters.size(); i++)
 			{
-				if (player.displayGuessedLetters.at(i); i++)
+				if (player.displayGuessedLetters.at(i))
 				{
 					player.alreadyGuessed = true;
 					cout << "Letter aleady guessed ";
@@ -94,9 +94,10 @@ void Game::Play(Player player, Dictionary dictionary)
 						//changes the char underscore for the letter
 						guessedLetters[i] = letter;
 						correctLetters++;
-						isGuessCorrect = true;
+						bool isGuessCorrect = true;
 					}
 				}
+				bool isGuessCorrect;
 				//checks if the isGuessCorrect variable is equal to false
 				if (isGuessCorrect == false)
 				{
@@ -105,7 +106,7 @@ void Game::Play(Player player, Dictionary dictionary)
 
 					//calls the getNewLetter function from player to increment the number of wrong guesses and total guesses by one
 					player.getNewLetter(letter, isGuessCorrect);
-						displayCharGuessed = player.getListCharGuessed();
+					player.displayGuessedLetters = player.getListCharGuessed();
 				}
 				else
 				{
@@ -113,7 +114,7 @@ void Game::Play(Player player, Dictionary dictionary)
 					cout << "You guessed a letter! " << endl;
 					//calls getNewLetter function from player to incremet number of total guesses by one
 					player.getNewLetter(letter, isGuessCorrect);
-					displayCharGuessed = player.getListCharGuessed();
+					player.displayGuessedLetters = player.getListCharGuessed();
 				}
 				//loop to display the guessedLetters array so player knows the letters guessed and get an idea of the word
 				for (int i = 0; i < wordLength; i++)
@@ -152,13 +153,30 @@ void Game::Play(Player player, Dictionary dictionary)
 void Game::winOrLoss(Player player)
 {
 	//checks if the number of wrong guesses is equal to the total number of wrong guesses allowed by game
-
+	if (player.getNumberOfWrongGuesses == totalNumberOfGuessesBeforeLoss)
+	{
+		//lets player know they lost
+		cout << "Sorry, you lost." << endl;
+		cout << " The word is " << word << endl;
+	}
+	else
+	{
+		cout << " You win!!  The word is " << word << endl;
+	}
 }
 void Game::getDisplayGuessedLetter(Player player)
 {
-
+	for (int i = 0; i < player.displayGuessedLetters.size(); i++)
+	{
+		cout << player.displayGuessedLetters[i] << " ";
+	}
 }
 void Game::resetGame(Player player, Dictionary dictionary)
 {
-
+	//calls the reset function from play to reinitiate the variable from player class
+	player.reset();
+	//gets  new word
+	getWordFromDictionary(dictionary);
+	//calls the function to play game again
+	Play(player, dictionary);
 }

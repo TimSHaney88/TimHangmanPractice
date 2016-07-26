@@ -28,7 +28,7 @@ public:
 	void chooseAWord();
 	//call the function to get the selected word
 	 string returnWord();
-	 string* pointer();
+	 //string* pointer();
 };
 
 
