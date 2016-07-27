@@ -13,12 +13,16 @@ class Game
 {
 private:
 	//total number of wrong guesses a player can have before losing
-	int totalNumberOfGuessesBeforeLoss;
+	int GuessesBeforeLoss;
 	//how many letters in word chosen
 	int wordLength;
 	//holds chosen word
 	string word;
 	//vector<char> display_char_guessed
+	//stores total number of guesses
+	int totalNumberOfGuesses;
+	//holds the number of correct guesses the player has
+	int correctLetters;
 
 public:
 	//initializes game
@@ -30,8 +34,7 @@ public:
 	void Play(Player player, Dictionary dictionary);
 	//checks if player wins or loses
 	void winOrLoss(Player player);
-	//gets character already guessed
-	void getDisplayGuessedLetter(Player player);
+	
 	//resets the game
 	void resetGame(Player player, Dictionary dictionary);
 

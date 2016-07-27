@@ -1,18 +1,4 @@
 ﻿  Game.cpp
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(42): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(72): error C2659: '=': function as left operand
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(73): error C2228: left of '.size' must have class/struct/union
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(75): error C2228: left of '.at' must have class/struct/union
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(77): error C2659: '=': function as left operand
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(82): error C3867: 'Player::alreadyGuessed': non-standard syntax; use '&' to create a pointer to member
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(82): warning C4805: '==': unsafe mix of type 'bool (__cdecl Player::* )(char)' and type 'bool' in operation
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(82): error C2446: '==': no conversion from 'int' to 'bool (__cdecl Player::* )(char)'
-  c:\users\thane\documents\github\timhangmanpractice\game.cpp(82): note: There are no conversions from integral values to pointer-to-member values
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(109): error C2659: '=': function as left operand
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(117): error C2659: '=': function as left operand
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(156): error C3867: 'Player::getNumberOfWrongGuesses': non-standard syntax; use '&' to create a pointer to member
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(156): error C2446: '==': no conversion from 'int' to 'int (__cdecl Player::* )(void)'
-  c:\users\thane\documents\github\timhangmanpractice\game.cpp(156): note: There are no conversions from integral values to pointer-to-member values
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(169): error C2228: left of '.size' must have class/struct/union
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(171): error C3867: 'Player::displayGuessedLetters': non-standard syntax; use '&' to create a pointer to member
-c:\users\thane\documents\github\timhangmanpractice\game.cpp(171): error C2109: subscript requires array or pointer type
+c:\users\timdesktop\documents\github\timhangmanpractice\game.cpp(41): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+  Hangman.vcxproj -> C:\Users\TimDesktop\Documents\GitHub\TimHangmanPractice\x64\Debug\Hangman.exe
+  Hangman.vcxproj -> C:\Users\TimDesktop\Documents\GitHub\TimHangmanPractice\x64\Debug\Hangman.pdb (Partial PDB)
